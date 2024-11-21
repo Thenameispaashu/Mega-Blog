@@ -1,7 +1,16 @@
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
+import Logo from "./Logo";
+import Container  from "./container/Container";
+import { LogoutBtn } from "./Header/LogoutBtn";
+import RTE from "./RTE";
+
 
 export {
     Header,
-    Footer
+    Footer,
+    Logo,
+    Container,
+    LogoutBtn,
+    RTE,
 }
