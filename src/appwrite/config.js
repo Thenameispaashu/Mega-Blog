@@ -40,7 +40,7 @@ export class Service{
                 conf.appwriteCollectionId,
                 slug,
                 {
-                    title,
+                    title, 
                     content,
                     featuredImage,
                     status,
@@ -125,11 +125,19 @@ export class Service{
     }
 
     getFilePreview(fileId){
+        if (!fileId) {
+            console.error("getFilePreview :: Missing fileId");
+            return null; // Or throw an error if you want to enforce it
+        }
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
             fileId
         )
+        
+        
     }
+    
+    
 }
 
 
